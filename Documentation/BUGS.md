@@ -20,7 +20,8 @@ There are random "permission denied" sound effects when application running.
 Program cannot exit properly (infinite loading bug upon exit).
 `
 Occured when I did not give certain permissions to ScreenTrack\
-<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Exit%20Bug%201.png" width="200" alt="Bug Image 1"/>
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Exit%20Bug%201.png" width="550" alt="Exit Bug 1" />
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Exit%20Bug%202.png" width="450" alt="Exit Bug 2" />
 
 ### Duplicate User Permission Bugs
 
