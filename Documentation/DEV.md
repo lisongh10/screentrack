@@ -37,3 +37,6 @@ Currently, upon starting ScreenTrack for the first time, everytime I switch to a
 Currently, images are stored as JPGs in the _Document_ folder.
 
 ## App Delegate
+
+**Description**\
+This section describes the code initially found in AppDelegate.swift

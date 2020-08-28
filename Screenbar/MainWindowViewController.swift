@@ -4,10 +4,6 @@
 import Cocoa
 import AppKit
 
-protocol buttonchange {
-    associatedtype Buttonclick: NSObject = Self
-}
-
 // global variable of file path
 struct MyVariables {
     static var yourVariable = "someString"
