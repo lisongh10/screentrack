@@ -5,8 +5,8 @@ This document is intended to help developers work on the application - specifica
 
 ## Contents
 
-- [Future Implementations Improvements](future-implementation-improvements)
-- [App Delegate](app-delegate)
+- [Future Implementations Improvements](#future-implementation-improvements)
+- [App Delegate](#app-delegate)
 
 ## Future Implementations and Improvements
 
