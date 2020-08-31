@@ -22,7 +22,6 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
     
     var fileNameDictionary: NSMutableDictionary = NSMutableDictionary()
 
-    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         self.addImage()
         self.initMainWindowPopover()
@@ -104,7 +103,7 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
     // set the image or icon on menubar
     func addImage() {
         if let button = statusItem.button {
-            button.image = useSFSymboleIfPossible(oldAssetName: "ScreenbarIcon", systemName: "camera")
+            button.image = useSFSymboleIfPossible(fromOldImage: "ScreenbarIcon", toNewSFSymbol: "camera")
             statusItem.alternateImage = button.image
             statusItem.highlightMode = true
             button.action = #selector(self.showMainWindow)
@@ -170,10 +169,6 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
     func hideMainWindow(_ sender: AnyObject?) {
         self.mainWindowPopover.performClose(sender)
         eventMonitor?.stop()
-    }
-    
-    func terminate() {
-        exit(0)
     }
     
     // MARK: - Core Data stack

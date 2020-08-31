@@ -5,6 +5,6 @@ This document describes the code additions/removals that have been made to the r
 
 ## 9/01/2020 (Tuesday)
 
-- Added useSFSymboleIfPossible()
+- Implemented useSFSymboleIfPossible() in Utilities.swift
 - Removed deprecated code
 - Updated program to Swift 5

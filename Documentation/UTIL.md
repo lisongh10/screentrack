@@ -16,7 +16,7 @@ SF Symbols are only available on macOS 11, therefore I created the following pub
 public func useSFSymboleIfPossible(fromOldImage: String, toNewSFSymbol: String);
 ```
 
-**Parameters**\
+**Parameters**
 
 ```
 {
