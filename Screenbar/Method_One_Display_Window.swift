@@ -48,7 +48,7 @@ class Method_One_Display_Window: NSViewController{
     func defaultDisplay(){
         let ReplayingOneHandler = ReplayingMethodTwo()
         var totalAmount = 0
-        dictionaryTemp = ReplayingOneHandler.FetchPhotoToday() as! [String: Int]
+        dictionaryTemp = ReplayingOneHandler.FetchPhotoToday() 
         if dictionaryTemp.count == 0{
             print("no photo recording today")
             DefaultNoPhotoRecordedDisplay()
@@ -75,7 +75,7 @@ class Method_One_Display_Window: NSViewController{
     //end of defaultDisplay()
     //
     func DefaultNoPhotoRecordedDisplay(){
-        let defaultImage = NSImage(named : NSImage.Name(rawValue: "No_Image_Available"))
+        let defaultImage = NSImage(named : "No_Image_Available")
         imageDisplayArea.imageScaling = .scaleProportionallyUpOrDown
         imageDisplayArea.image = defaultImage
     }

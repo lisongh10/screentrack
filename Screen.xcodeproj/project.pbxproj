@@ -14,6 +14,7 @@
 		3DA791FF1CDBC45C00F60252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA791FE1CDBC45C00F60252 /* Assets.xcassets */; };
 		3DA792021CDBC45C00F60252 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA792001CDBC45C00F60252 /* MainMenu.xib */; };
 		3DB4D6B11CDCED5C001F5011 /* ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4D6B01CDCED5C001F5011 /* ScreenShot.swift */; };
+		87615C8D24FDA0D200770332 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87615C8C24FDA0D200770332 /* Utilities.swift */; };
 		D95ED0052353DA16004DB16A /* activitiesDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95ED0042353DA16004DB16A /* activitiesDetection.swift */; };
 		EA03B5AB218CF32100023472 /* MosePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03B5AA218CF32100023472 /* MosePosition.swift */; };
 		EA0F54F42230A1920040CB4F /* OpenSoftware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F54F32230A1920040CB4F /* OpenSoftware.swift */; };
@@ -58,6 +59,7 @@
 		3DA792011CDBC45C00F60252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3DA792031CDBC45C00F60252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DB4D6B01CDCED5C001F5011 /* ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShot.swift; sourceTree = "<group>"; };
+		87615C8C24FDA0D200770332 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D95ED0042353DA16004DB16A /* activitiesDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activitiesDetection.swift; sourceTree = "<group>"; };
 		EA03B5AA218CF32100023472 /* MosePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosePosition.swift; sourceTree = "<group>"; };
 		EA0F54F32230A1920040CB4F /* OpenSoftware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSoftware.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				3D1C2F311CE2661600FB8AB8 /* Library */,
 				3D1C2F301CE265BA00FB8AB8 /* Views */,
 				3DA791FC1CDBC45C00F60252 /* AppDelegate.swift */,
+				87615C8C24FDA0D200770332 /* Utilities.swift */,
 				3DA791FE1CDBC45C00F60252 /* Assets.xcassets */,
 				3DA792031CDBC45C00F60252 /* Info.plist */,
 				EA2C56C621FE481900178AFF /* folderName.plist */,
@@ -222,21 +225,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					3DA791F81CDBC45C00F60252 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
 			buildConfigurationList = 3DA791F41CDBC45C00F60252 /* Build configuration list for PBXProject "Screen" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -292,6 +294,7 @@
 				EA20985D222203F7001BD0FB /* JsonfileDataAfterTracking.swift in Sources */,
 				EA15F6622241CC8600C5657C /* TreeMap.swift in Sources */,
 				EAF5EFE1220E3C2900BDBF7D /* Method_One_Display_Window.swift in Sources */,
+				87615C8D24FDA0D200770332 /* Utilities.swift in Sources */,
 				3DB4D6B11CDCED5C001F5011 /* ScreenShot.swift in Sources */,
 				EA8AF31C2208DEDB00D343E3 /* ReplayingOne.swift in Sources */,
 				EA306AD9223AE41E002BB88B /* CreateErrorFile.swift in Sources */,
@@ -344,6 +347,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -401,6 +405,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -431,12 +436,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Screenbar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.Screen;
 				PRODUCT_NAME = Reflector;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -444,13 +450,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Screenbar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.Screen;
 				PRODUCT_MODULE_NAME = Reflector;
 				PRODUCT_NAME = Reflector;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

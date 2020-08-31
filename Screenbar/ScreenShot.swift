@@ -100,7 +100,7 @@ class ScreenShot : NSObject {
         let final = first + AppName + second
         var error: NSDictionary?
         let scriptObject = NSAppleScript(source: final)
-        let output: NSAppleEventDescriptor = scriptObject!.executeAndReturnError(&error)
+        let _: NSAppleEventDescriptor = scriptObject!.executeAndReturnError(&error)
         if (error != nil) {
             print("error for GetBoundOfFrontMostSoftware: \(String(describing: error))")
             let positionTemp = [230, 108]
@@ -134,8 +134,8 @@ class ScreenShot : NSObject {
         else{
             for i in 1..<3{
                 let temp = String(describing: output.atIndex(i)?.int32Value)
-                let start = temp.characters.index(of: "(")!
-                let end = temp.characters.index(of: ")")!
+                let start = temp.firstIndex(of: "(")!
+                let end = temp.firstIndex(of: ")")!
                 let subStr = temp[start..<end]
                 let newStart = subStr.index(subStr.startIndex, offsetBy: 1)
                 let newEnd = subStr.index(subStr.endIndex, offsetBy : 0)
@@ -190,8 +190,8 @@ class ScreenShot : NSObject {
             var arr = [Int]()
             for i in 1..<3{
                 let temp = String(describing: output.atIndex(i)?.int32Value)
-                let start = temp.characters.index(of: "(")!
-                let end = temp.characters.index(of: ")")!
+                let start = temp.firstIndex(of: "(")!
+                let end = temp.firstIndex(of: ")")!
                 let subStr = temp[start..<end]
                 let newStart = subStr.index(subStr.startIndex, offsetBy: 1)
                 let newEnd = subStr.index(subStr.endIndex, offsetBy : 0)

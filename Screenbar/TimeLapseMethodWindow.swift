@@ -124,11 +124,11 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
     
     //
     func imageButtonSet(){
-        imageButtonPrevious.image = NSImage(named: NSImage.Name(rawValue: "Previous"))
-        imageButtonNext.image   = NSImage(named: NSImage.Name(rawValue: "Next"))
-        imageButtonPlay.image = NSImage(named: NSImage.Name(rawValue: "PlayIcon"))
-        NextVideoImageButton.image = NSImage(named: NSImage.Name(rawValue: "nextvideo"))
-        PreviousVideoImageButton.image = NSImage(named: NSImage.Name(rawValue: "previousvideo"))
+        imageButtonPrevious.image = NSImage(named: "Previous")
+        imageButtonNext.image   = NSImage(named: "Next")
+        imageButtonPlay.image = NSImage(named: "PlayIcon")
+        NextVideoImageButton.image = NSImage(named: "nextvideo")
+        PreviousVideoImageButton.image = NSImage(named: "previousvideo")
         
     }
     //
@@ -202,7 +202,7 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
     }
     //end of DefaultDisplayToday()
     func DefaultNoPhotoRecordedDisplay(){
-        let defaultImage = NSImage(named : NSImage.Name(rawValue: "No_Image_Available"))
+        let defaultImage = NSImage(named : "No_Image_Available")
         ImageDisplayArea.imageScaling = .scaleProportionallyUpOrDown
         ImageDisplayArea.image = defaultImage
     }
@@ -220,7 +220,7 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
     func DefaultImageDisplay(){
         openEnclosingFolderButton.isEnabled = true
         if DisplayLatestPic() == ""{
-            let defaultImage = NSImage(named : NSImage.Name(rawValue: "DefaultDisplayImage"))
+            let defaultImage = NSImage(named : "DefaultDisplayImage")
             ImageDisplayArea.imageScaling = .scaleProportionallyUpOrDown
             ImageDisplayArea.image = defaultImage
         }
@@ -742,8 +742,8 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
         if DicMessage["PhotoName"] != nil{
             name = DicMessage["PhotoName"] as! String
         }
-        guard let start = name.characters.index(of: "-") else { return "error" }
-        guard let end = name.characters.index(of: "j") else { return "error" }
+        guard let start = name.firstIndex(of: "-") else { return "error" }
+        guard let end = name.firstIndex(of: "j") else { return "error" }
         
         let subStr = name[start..<end]
         let newStart = subStr.index(subStr.startIndex, offsetBy: 1)
@@ -779,7 +779,7 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
         }
         else{
             //ButtonOfPlay.title = "Pause"
-            imageButtonPlay.image = NSImage(named : NSImage.Name(rawValue: "PauseIcon"))
+            imageButtonPlay.image = NSImage(named : "PauseIcon")
             self.startPlaying()
         }
     }
@@ -853,7 +853,7 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
         }
         else {
             self.playImageTimer.invalidate()
-            imageButtonPlay.image = NSImage(named : NSImage.Name(rawValue: "PlayIcon"))
+            imageButtonPlay.image = NSImage(named : "PlayIcon")
             //ButtonOfPlay.title = "play end"
         }
     }
@@ -862,7 +862,7 @@ class TimeLapseMethodWindow: NSViewController, NSWindowDelegate {
     }
     func stopPlaying(){
         self.playImageTimer.invalidate()
-        imageButtonPlay.image = NSImage(named : NSImage.Name(rawValue: "PlayIcon"))
+        imageButtonPlay.image = NSImage(named : "PlayIcon")
         //ButtonOfPlay.title = "play"
     }
     

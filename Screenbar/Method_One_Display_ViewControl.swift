@@ -175,7 +175,7 @@ class Method_One_Display_ViewControl: NSViewController, NSTextViewDelegate {
     
     func DefaultImageDisplay(){
         if DisplayLatestPic() == ""{
-            let defaultImage = NSImage(named : NSImage.Name(rawValue: "DefaultDisplayImage"))
+            let defaultImage = NSImage(named : "DefaultDisplayImage")
             ImageDisplayArea.imageScaling = .scaleProportionallyUpOrDown
             ImageDisplayArea.image = defaultImage
         }
@@ -859,8 +859,8 @@ class Method_One_Display_ViewControl: NSViewController, NSTextViewDelegate {
         if DicMessage["PhotoName"] != nil{
             name = DicMessage["PhotoName"] as! String
         }
-        guard let start = name.characters.index(of: "-") else { return "error" }
-        guard let end = name.characters.index(of: "j") else { return "error" }
+        guard let start = name.firstIndex(of: "-") else { return "error" }
+        guard let end = name.firstIndex(of: "j") else { return "error" }
         let subStr = name[start..<end]
         let newStart = subStr.index(subStr.startIndex, offsetBy: 1)
         let newEnd = subStr.index(subStr.endIndex, offsetBy : -1)

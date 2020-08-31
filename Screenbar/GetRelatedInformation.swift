@@ -57,13 +57,12 @@ class RelatedInformation{
     func BasedOnJsonPath(jsonpath : String, screenshot : String) -> Dictionary<String, Any>{
         //open this json path
         //use a string array to store information
-        let informationarray = [String]()
         var returnDictionary = [String : Any]()
         let rawData : NSData = try! NSData(contentsOf: URL(fileURLWithPath: jsonpath))
         do{
             let jsonDataDictionary = try JSONSerialization.jsonObject(with: rawData as Data, options: JSONSerialization.ReadingOptions.mutableContainers)as? NSDictionary
             let dictionaryOfReturnedJsonData = jsonDataDictionary as! Dictionary<String, AnyObject>
-            var jsonarray = dictionaryOfReturnedJsonData["Information"] as! [[String: Any]]
+            let jsonarray = dictionaryOfReturnedJsonData["Information"] as! [[String: Any]]
             let length = jsonarray.count
             //print(length)
             //the first is initial information, which should not be considered

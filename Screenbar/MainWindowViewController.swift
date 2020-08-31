@@ -102,7 +102,7 @@ class MainWindowViewController: NSViewController, NSTextFieldDelegate {
         self.setPlaySound()
         
     }
-    override func controlTextDidChange(_ notification: Notification) {
+    func controlTextDidChange(_ notification: Notification) {
         if let textField = notification.object as? NSTextField {
             print(textField.stringValue)
             //do what you need here
@@ -221,8 +221,6 @@ class MainWindowViewController: NSViewController, NSTextFieldDelegate {
             //Settings.getPath().path is the name of json file
             //close the main window
             self.close()
-            let date = Date()
-            let calendar = Calendar.current
             Settings.PathCreate()
             jpath = jsonfileHandler.createjson(filepath: URL(string: MyVariables.yourVariable)!)
             erpath = errorfileHandler.createError(filepath: URL(string: MyVariables.yourVariable)!)
@@ -247,7 +245,7 @@ class MainWindowViewController: NSViewController, NSTextFieldDelegate {
         if (Settings.getDetectSwitch() == 1){
             self.timerFrontmost = Timer.scheduledTimer(timeInterval: 3.0, target: frontmostappHandler, selector: #selector(FrontmostApp.DetectFrontMostApp), userInfo: nil, repeats: true)
         }
-        self.ChangeTitleOfButton("Recording! Stop")
+        self.ChangeTitleOfButton("Stop Recording!")
     }
 
     func stopAutomaticScreenShot() {
