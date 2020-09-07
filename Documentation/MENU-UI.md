@@ -12,7 +12,6 @@ The following are Apple's designs for macOS menu interfaces.\
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Audios.png" width="300" alt="Audio Menu Interface">
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Bluetooth.png" width="300" alt="Bluetooth Menu Interface">
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Power.png" width="300" alt="Power Menu Interface">
-<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/WiFi.png" width="300" alt="WiFi Menu Interface">
 
 These are the problems that I wish to resolve with ScreenTrack's menu interface:
 
