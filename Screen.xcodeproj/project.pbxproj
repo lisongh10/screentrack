@@ -15,6 +15,7 @@
 		3DA792021CDBC45C00F60252 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA792001CDBC45C00F60252 /* MainMenu.xib */; };
 		3DB4D6B11CDCED5C001F5011 /* ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4D6B01CDCED5C001F5011 /* ScreenShot.swift */; };
 		87615C8D24FDA0D200770332 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87615C8C24FDA0D200770332 /* Utilities.swift */; };
+		87B8A5DF2506E2D200180D8F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8A5DE2506E2D200180D8F /* DataModel.swift */; };
 		D95ED0052353DA16004DB16A /* activitiesDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95ED0042353DA16004DB16A /* activitiesDetection.swift */; };
 		EA03B5AB218CF32100023472 /* MosePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03B5AA218CF32100023472 /* MosePosition.swift */; };
 		EA0F54F42230A1920040CB4F /* OpenSoftware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F54F32230A1920040CB4F /* OpenSoftware.swift */; };
@@ -60,6 +61,8 @@
 		3DA792031CDBC45C00F60252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DB4D6B01CDCED5C001F5011 /* ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShot.swift; sourceTree = "<group>"; };
 		87615C8C24FDA0D200770332 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		87B8A5DE2506E2D200180D8F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		87C54C5D2506EA73007CC173 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D95ED0042353DA16004DB16A /* activitiesDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activitiesDetection.swift; sourceTree = "<group>"; };
 		EA03B5AA218CF32100023472 /* MosePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosePosition.swift; sourceTree = "<group>"; };
 		EA0F54F32230A1920040CB4F /* OpenSoftware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSoftware.swift; sourceTree = "<group>"; };
@@ -172,17 +175,27 @@
 		3DA791FB1CDBC45C00F60252 /* Screenbar */ = {
 			isa = PBXGroup;
 			children = (
+				87C54C5E2506EA86007CC173 /* Documentation */,
 				EA0F54F2222F09700040CB4F /* Method two */,
 				3D1C2F2F1CE265A500FB8AB8 /* Controllers */,
 				3D1C2F311CE2661600FB8AB8 /* Library */,
 				3D1C2F301CE265BA00FB8AB8 /* Views */,
 				3DA791FC1CDBC45C00F60252 /* AppDelegate.swift */,
 				87615C8C24FDA0D200770332 /* Utilities.swift */,
+				87B8A5DE2506E2D200180D8F /* DataModel.swift */,
 				3DA791FE1CDBC45C00F60252 /* Assets.xcassets */,
 				3DA792031CDBC45C00F60252 /* Info.plist */,
 				EA2C56C621FE481900178AFF /* folderName.plist */,
 			);
 			path = Screenbar;
+			sourceTree = "<group>";
+		};
+		87C54C5E2506EA86007CC173 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				87C54C5D2506EA73007CC173 /* README.md */,
+			);
+			path = Documentation;
 			sourceTree = "<group>";
 		};
 		EA0F54F2222F09700040CB4F /* Method two */ = {
@@ -298,6 +311,7 @@
 				3DB4D6B11CDCED5C001F5011 /* ScreenShot.swift in Sources */,
 				EA8AF31C2208DEDB00D343E3 /* ReplayingOne.swift in Sources */,
 				EA306AD9223AE41E002BB88B /* CreateErrorFile.swift in Sources */,
+				87B8A5DF2506E2D200180D8F /* DataModel.swift in Sources */,
 				EA15F6642241CCAE00C5657C /* RandomColor.swift in Sources */,
 				EA30174A224334F800BBEDDC /* MainWindowViewController.swift in Sources */,
 				EAF9A03B21C04DAD0071DDCD /* OpeningDocumentInfor.swift in Sources */,

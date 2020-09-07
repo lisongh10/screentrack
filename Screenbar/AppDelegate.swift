@@ -3,8 +3,6 @@ import Foundation
 import AppKit
 import CoreData
 
-
-
 @available(OSX 10.13, *)
 @NSApplicationMain
 class AppDelegate: NSViewController, NSApplicationDelegate {
@@ -15,10 +13,10 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
     let mainWindowPopover = NSPopover()
     var eventMonitor : EventMonitor?
     
-    static let applicationDelegate: AppDelegate = NSApplication.shared.delegate as! AppDelegate
-    static var SessionNumber = [Int]()
-    
-    var timerScroll: Timer = Timer()
+//    static let applicationDelegate: AppDelegate = NSApplication.shared.delegate as! AppDelegate
+//    static var SessionNumber = [Int]()
+//
+//    var timerScroll: Timer = Timer()
     
     var fileNameDictionary: NSMutableDictionary = NSMutableDictionary()
 
