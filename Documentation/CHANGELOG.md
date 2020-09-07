@@ -7,6 +7,7 @@ This document describes the code additions/removals that have been made to the r
 
 - Created DataModel.swift and documented it in DATAMODEL.md
 - Created wireframe for a new user interface
+- **Issue** Found the _menu visual bug_
 
 ## 9/01/2020
 
