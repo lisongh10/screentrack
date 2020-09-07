@@ -41,5 +41,5 @@ Unsure if this is because the program is being run by xcode or not.
 
 ### Menu Visual Bug
 **Description**\
-The menu bar closes when not hovering the screen track menu. The following screenshot shows the top of my screen when I stop hovering screentrack.
+The menu bar closes when not hovering the screen track menu. The following screenshot shows the top of my screen when I stop hovering screentrack.\
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Bug%20Images/Menu%20Visual%201.png" width="550" alt="Menu Visual Bug 1">
