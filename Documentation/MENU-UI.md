@@ -14,7 +14,7 @@ This document describes the user interface for ScreenTrack's _Menu_.
 __Issues__
 1. The menu should __not__ be a table (the information and controls are all presented to the user at the same time)
 2. Unorganized
-3. Menus should __not__ utilize _buttons_
+3. Menus should __not__ utilize _standard buttons_
 4. Requires Users to type in the menu
 5. Out of date styles (scrollers, checkboxes)
 
@@ -34,6 +34,10 @@ __Relavent Design Principles from Apple__
 7. There is __always__ leading padding no matter the application
 
 ## Sketch
+__Overview__\
+The following sketch is created to fix previously mentioned issues (refer to [Old Menu - Issues](#old-menu)). Note that the buttons in the sketch are purely for showcasing purposes and should actually not be _standard buttons_.
+
+
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack%20Wireframe.png" width="500" alt="ScreenTrack Menu Wireframe">
 
 The following are the design principles and standards that I utilized in the redesign:
