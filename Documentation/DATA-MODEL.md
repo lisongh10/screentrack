@@ -28,6 +28,9 @@ struct Day: Codable, Hashable, Identifiable {
 **Description**\
 The _ScreenSession_ struct represents one session of ScreenTrack usage. A user may have multiple sessions per day. A _ScreenSession_ consists of an array of _ScreenImage_ structs along with an UUID.
 
+__Notes__\
+In the future, this struct would theoretically contain information related to sorting and organizing user activity.
+
 ```swift
 struct ScreenSession: Codable, Hashable, Identifiable {
     var id: UUID
