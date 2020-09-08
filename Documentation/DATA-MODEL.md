@@ -16,7 +16,7 @@ This document describes the data model and data structure used in ScreenTrack
 The _Day_ struct represents one day in ScreenTrack. Each day consists of a _date_ and an array of _sessions_ along with an UUID.
 
 ```swift
-struct Data: Codable, Hashable, Identifiable {
+struct Day: Codable, Hashable, Identifiable {
     var id: UUID
     var date: Date
     var sessions: [ScreenSession]
