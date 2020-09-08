@@ -43,7 +43,7 @@ struct ScreenSession: Codable, Hashable, Identifiable {
 **Description**\
 The _ScreenImage_ struct represents one image taken of the user's device. Each image consists of its _imageURL_ which is the file path that the image is stored to on the user's device and its _imageData_ which stores the metadata related to each screen-shot.
 
-__Notes__
+__Notes__\
 The _imageURL_ attribute is debatable. It is too early in development to be able to see if we need this an imageURL associated with every __ScreenImage__. Ideally, we would be able to use the built in UIImage and read images directly.
 
 ```swift
