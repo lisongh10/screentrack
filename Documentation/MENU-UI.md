@@ -26,4 +26,4 @@ The following are the design principles and standards that I utilized in the red
 4. Modern and up to date symbols/icons
     - The top section and its corresponding side bars are modeled after _Bluetooth_ and _WiFi_
     - The middle section is modeled after _Audio_
-    - The bottom section is modeled after _WiFi_ (Note that my design shows buttons - this is purely for showcasing and will not actually be buttons. This is because buttons should __not__ be used in menu windows. Instead, buttons should be visualized as navigation links while they function as buttons)
+    - The bottom section is modeled after _WiFi_ (Note that my design shows buttons - this is purely for showcasing and will not actually be buttons. This is because buttons should __not__ be used in menu windows. Instead, "navigation links" should be used as buttons. Refer to Apple's designs (there are no buttons).
