@@ -12,9 +12,9 @@ This document describes the user interface for ScreenTrack's _Menu_.
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack.png" width="550" alt="Screen Track Menu">
 
 __Issues__
-1. The menu should __not__ be a table (the information and controls are all presented to the user at the same time)
+1. The menu should __NOT__ be a table (the information and controls are all presented to the user at the same time)
 2. Unorganized
-3. Menus should __not__ utilize _standard buttons_
+3. Menus should __NOT__ utilize _standard buttons_
 4. Requires Users to type in the menu
 5. Out of date styles (scrollers, checkboxes)
 
@@ -28,14 +28,16 @@ __Relavent Design Principles from Apple__
 1. Menus are one column
 2. Controls and details are offloaded to side bars
 3. Sections are clearly identified concise in purpose
-4. Menus should __not__ involve typing
-5. Standard buttons should __not__ be used in menus 
+4. Menus should __NOT__ involve typing
+5. Standard buttons should __NOT__ be used in menus 
 6. Checkmarks are used instead of checkboxes
-7. There is __always__ leading padding no matter the application
+7. There is __ALWAYS__ leading padding no matter the application
 
 ## Sketch
 __Overview__\
 The following sketch is created to fix previously mentioned issues (refer to [Old Menu - Issues](#old-menu)). Note that the buttons in the sketch are purely for showcasing purposes and should actually not be _standard buttons_.
+
+Also note that the user should __NOT__ type in the menu. I personally think that the textfields should be replaced with scrollers but I need more feedback.
 
 
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack%20Wireframe.png" width="500" alt="ScreenTrack Menu Wireframe">
@@ -50,4 +52,4 @@ The following are the design principles and standards that I utilized in the red
 4. Modern and up to date symbols/icons
     - The top section and its corresponding side bars are modeled after _Bluetooth_ and _WiFi_
     - The middle section is modeled after _Audio_
-    - The bottom section is modeled after _WiFi_ (Note that my design shows buttons - this is purely for showcasing and will not actually be buttons. This is because buttons should __not__ be used in menu windows. Instead, "navigation links" should be used as buttons. Refer to Apple's designs (there are no buttons).
+    - The bottom section is modeled after _WiFi_ (Note that my design shows buttons - this is purely for showcasing and will not actually be buttons. This is because buttons should __NOT__ be used in menu windows. Instead, "navigation links" should be used as buttons. Refer to Apple's designs (there are no buttons).
