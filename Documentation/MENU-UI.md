@@ -29,8 +29,9 @@ __Relavent Design Principles from Apple__
 2. Controls and details are offloaded to side bars
 3. Sections are clearly identified concise in purpose
 4. Menus should __not__ involve typing
-5. Buttons should __not__ be used in menus
+5. Standard buttons should __not__ be used in menus 
 6. Checkmarks are used instead of checkboxes
+7. There is __always__ leading padding no matter the application
 
 ## Sketch
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack%20Wireframe.png" width="500" alt="ScreenTrack Menu Wireframe">
