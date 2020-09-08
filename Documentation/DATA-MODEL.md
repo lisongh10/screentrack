@@ -1,7 +1,7 @@
 # Data Models
 
 **Overview**\
-This document describes the data model and data structure used in ScreenTrack
+This document describes the data model and data structure used in ScreenTrack. Note that as of Septemper 6, 2020, these models are far from finalized as it is too early in development to be able to tell.
 
 ## Contents
 
@@ -42,6 +42,9 @@ struct ScreenSession: Codable, Hashable, Identifiable {
 
 **Description**\
 The _ScreenImage_ struct represents one image taken of the user's device. Each image consists of its _imageURL_ which is the file path that the image is stored to on the user's device and its _imageData_ which stores the metadata related to each screen-shot.
+
+__Notes__
+The _imageURL_ attribute is debatable. It is too early in development to be able to see if we need this an imageURL associated with every __ScreenImage__. Ideally, we would be able to use the built in UIImage and read images directly.
 
 ```swift
 struct ScreenImage: Codable, Hashable, Identifiable {
