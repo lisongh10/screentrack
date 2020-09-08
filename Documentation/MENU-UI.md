@@ -3,17 +3,36 @@
 **Overview**\
 This document describes the user interface for ScreenTrack's _Menu_.
 
-Firstly, this is the ScreenTrack menu as of September, 6 2020.\
+## Content
+- [Old Menu](#old-menu)
+- [Apple's Menus](#apples-menus)
+- [Sketch and Related Design Principles](#sketch)
+
+## Old Menu
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack.png" width="550" alt="Screen Track Menu">
 
-There are a few problems with the interface design. The standard and convention set by Apple shows that macOS menu interfaces should only have one column.
+__Issues__
+1. The menu should __not__ be a table (the information and controls are all presented to the user at the same time)
+2. Unorganized
+3. Menus should __not__ utilize _buttons_
+4. Requires Users to type in the menu
+5. Out of date styles (scrollers, checkboxes)
 
+## Apple's Menus
 The following are Apple's designs for macOS menu interfaces.\
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Audios.png" width="300" alt="Audio Menu Interface">
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Bluetooth.png" width="300" alt="Bluetooth Menu Interface">
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Power.png" width="300" alt="Power Menu Interface">
 
-I have created the following wireframe for ScreenTrack's Menu Interface.\
+__Relavent Design Principles from Apple__
+1. Menus are one column
+2. Controls and details are offloaded to side bars
+3. Sections are clearly identified concise in purpose
+4. Menus should __not__ involve typing
+5. Buttons should __not__ be used in menus
+6. Checkmarks are used instead of checkboxes
+
+## Sketch
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack%20Wireframe.png" width="500" alt="ScreenTrack Menu Wireframe">
 
 The following are the design principles and standards that I utilized in the redesign:
