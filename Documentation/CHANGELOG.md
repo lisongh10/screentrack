@@ -3,6 +3,10 @@
 **Overview**\
 This document describes the code additions/removals that have been made to the repository
 
+## 9/14/2020
+- Updated the Menu user interface in the main menu nib file
+- Started converting functionalities in response to the UI update
+
 ## 9/08/2020
 
 - Created DataModel.swift and documented it in DATAMODEL.md
