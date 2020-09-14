@@ -73,4 +73,7 @@ The following design is derived from the [sketch above](#sketch) and is improved
 
 __Feedback__
 - Actions buttons should be at the top
-- Show current user settings in the menu by default
+- Show current user settings in the menu by default\
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu-v2.png" width="300" alt="ScreenTrack Menu Version 2">
+
+__Note that this menu was created on macOS Big Sur.__
