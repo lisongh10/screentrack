@@ -6,7 +6,9 @@ This document describes the user interface for ScreenTrack's _Menu_.
 ## Content
 - [Old Menu](#old-menu)
 - [Apple's Menus](#apples-menus)
+- [macOS Big Sur](#macos-big-sur)
 - [Sketch and Related Design Principles](#sketch)
+- [Updated Design After Feedback](#updated-design-after-feedback)
 
 ## Old Menu
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/ScreenTrack.png" width="550" alt="Screen Track Menu">
@@ -33,6 +35,17 @@ __Relavent Design Principles from Apple__
 6. Checkmarks are used instead of checkboxes
 7. There is __ALWAYS__ leading padding no matter the application
 
+## macOS Big Sur
+__Overview__\
+macOS Big Sur is the next macOS update. The following screen shots are updated menu designs by Apple.\
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Calendar-BigSur.png" width="180" alt="Calender Menu Interface">
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Configurations-BigSur.png" width="180" alt="Configurations Menu Interface">
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Display-BigSur.png" width="180" alt="Display Menu Interface">
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/Power-BigSur.png" width="180" alt="Power Menu Interface">
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu%20UI%20Images/WiFi-BigSur.png" width="180" alt="WiFi Menu Interface">
+
+Most of these are stylistic updates __except__ Configurations Menu which is now a table resembling an iOS device's menu.
+
 ## Sketch
 __Overview__\
 The following sketch is created to fix previously mentioned issues (refer to [Old Menu - Issues](#old-menu)). Note that the buttons in the sketch are purely for showcasing purposes and should actually not be _standard buttons_.
@@ -53,3 +66,11 @@ The following are the design principles and standards that I utilized in the red
     - The top section and its corresponding side bars are modeled after _Bluetooth_ and _WiFi_
     - The middle section is modeled after _Audio_
     - The bottom section is modeled after _WiFi_ (Note that my design shows buttons - this is purely for showcasing and will not actually be buttons. This is because buttons should __NOT__ be used in menu windows. Instead, "navigation links" should be used as buttons. Refer to Apple's designs (there are no buttons).
+
+## Updated Design After Feedback
+__Overview__\
+The following design is derived from the [sketch above](#sketch) and is improved with feedback from Dr. Lee.
+
+__Feedback__
+- Actions buttons should be at the top
+- Show current user settings in the menu by default
