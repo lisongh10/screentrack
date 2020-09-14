@@ -46,6 +46,16 @@ macOS Big Sur is the next macOS update. The following screen shots are updated m
 
 Most of these are stylistic updates __except__ Configurations Menu which is now a table resembling an iOS device's menu.
 
+__Changes That may affect ScreenTrack__\
+Apple is switching to a __SwiftUI__ based development slowly but surely. Consider developing ScreenTrack and related functionalities in SwiftUI instead for more supported and updated functionalities by Apple.
+
+SwiftUI runs on macOS 10.15+
+
+__Questions__
+- What macOS versions do we support (macOS 10.15 is the dominating majority)
+- macOS Big Sur is scheduled to release in late 2020.
+- What is the best approach when designing the UI (since standard UI components are to be updated very soon by Apple)
+
 ## Sketch
 __Overview__\
 The following sketch is created to fix previously mentioned issues (refer to [Old Menu - Issues](#old-menu)). Note that the buttons in the sketch are purely for showcasing purposes and should actually not be _standard buttons_.
@@ -73,7 +83,7 @@ The following design is derived from the [sketch above](#sketch) and is improved
 
 __Feedback__
 - Actions buttons should be at the top
-- Show current user settings in the menu by default\
+- Show current user settings in the menu by default
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Menu-v2.png" width="300" alt="ScreenTrack Menu Version 2">
 
 __Note that this menu was created on macOS Big Sur.__
