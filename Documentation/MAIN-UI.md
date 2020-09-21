@@ -11,16 +11,17 @@ This document describes the redesigning process of the main user interface or th
 - [Rationale for the Sketch](#rationale-for-the-new-design)
 
 ## Old Design
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/ScreenTrack.png" width="100%" alt="ScreenTrack">
 
-**Issues**
-
+**Minor Issues**
 1. Does not need a **Close** button to close the application
 2. Menus are _usually_ on the left side for consistency reasons (though this can be a design choice)
-3. Date selector has **horrible** user interaction mechanics
-4. Debatable choice for having **Play Speed** section
-5. The lack of Dock menu prevents users from switching screens with the Main Menu open
-6. **Massive** window sizing issue (I assume it's from the lack of constraints in the storyboard design)
-7. Unintuitive screenshot player design
+3. Debatable choice for having **Play Speed** section
+
+**Major Issues**
+1. The lack of Dock menu prevents users from switching screens with the Main Menu open
+2. **Massive** window sizing issue (I assume it's from the lack of constraints in the storyboard design)
+3. Unintuitive screenshot player design
 
 ## Design Guidelines
 
@@ -28,6 +29,11 @@ This document describes the redesigning process of the main user interface or th
 The _Design Guidelines_ section will describe relavent principles in macOS software development that I believe will be useful for ScreenTrack. To keep this documentation short, I will only describe relavent guidelines.
 
 [Human Interface Guidlines By Apple](https://developer.apple.com/design/human-interface-guidelines/)
+
+<span><img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/App%20Store.png" width="45%" alt="Example macOS application"/>
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Books.png" width="45%" alt="Example macOS application"/>
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Calendar.png" width="45%" alt="Example macOS application"/>
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Reminder.png" width="45%" alt="Example macOS application"/> </span>
 
 **macOS Design Themes**
 
@@ -60,8 +66,10 @@ To further expand on the theme of _focused_. We can also make the screenshot the
 ## Sketch
 
 ### Wire Frame 1
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Main%20Wireframe%201.png" width="100%" alt="Wireframe 1"/>
 
 ### Wire Frame 2
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Main%20Wireframe%202.png" width="100%" alt="Wireframe 2"/>
 
 ## Rationales for the Sketch
 
