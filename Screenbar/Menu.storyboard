@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17154"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="XmA-a4-d2K">
+            <objects>
+                <viewController identifier="MenuViewController" storyboardIdentifier="MenuViewController" id="Fa2-K0-mvv" customClass="MenuViewController" customModule="Reflector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="klp-wo-g3u">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="20"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNu-kc-FMp">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="20"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QKb-ik-Ad7">
+                                        <rect key="frame" x="-1" y="-2" width="452" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="eX7-Ls-N3v"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="roundTextured" title="Record" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uhn-j7-O0h">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="recordTapped:" target="Fa2-K0-mvv" id="YLD-UB-RNt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QKb-ik-Ad7" secondAttribute="trailing" id="Ala-NT-igS"/>
+                                    <constraint firstItem="QKb-ik-Ad7" firstAttribute="top" secondItem="hNu-kc-FMp" secondAttribute="top" id="EoS-mx-dIk"/>
+                                    <constraint firstItem="QKb-ik-Ad7" firstAttribute="leading" secondItem="hNu-kc-FMp" secondAttribute="leading" id="h0G-rb-pMV"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hNu-kc-FMp" firstAttribute="top" secondItem="klp-wo-g3u" secondAttribute="top" id="6GS-zk-kTH"/>
+                            <constraint firstAttribute="trailing" secondItem="hNu-kc-FMp" secondAttribute="trailing" id="Yxo-UH-4qu"/>
+                            <constraint firstItem="hNu-kc-FMp" firstAttribute="leading" secondItem="klp-wo-g3u" secondAttribute="leading" id="qu3-te-mz3"/>
+                            <constraint firstAttribute="bottom" secondItem="hNu-kc-FMp" secondAttribute="bottom" id="v0o-bx-Y84"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordButton" destination="QKb-ik-Ad7" id="vOr-p1-TDS"/>
+                    </connections>
+                </viewController>
+                <customObject id="LpM-Yw-Nep" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="92"/>
+        </scene>
+    </scenes>
+</document>

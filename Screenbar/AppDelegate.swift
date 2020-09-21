@@ -7,16 +7,20 @@ import CoreData
 @NSApplicationMain
 class AppDelegate: NSViewController, NSApplicationDelegate {
 
+    
     @IBOutlet weak var window: NSWindow!
     
     let statusItem = NSStatusBar.system.statusItem(withLength: -2)
     let mainWindowPopover = NSPopover()
     var eventMonitor : EventMonitor?
     
-//    static let applicationDelegate: AppDelegate = NSApplication.shared.delegate as! AppDelegate
-//    static var SessionNumber = [Int]()
-//
-//    var timerScroll: Timer = Timer()
+    static let applicationDelegate: AppDelegate = NSApplication.shared.delegate as! AppDelegate
+    static var SessionNumber = [Int]()
+
+    var timerScroll: Timer = Timer()
+    
+    var popover: NSPopover!
+    var statusBarItem: NSStatusItem!
     
     var fileNameDictionary: NSMutableDictionary = NSMutableDictionary()
 
@@ -24,10 +28,10 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
         self.addImage()
         self.initMainWindowPopover()
         self.initEventMonitor()
-        
+
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentDirectoryPath = paths[0] as String
-        
+
         let plistFilePathInDocumentDirectory = documentDirectoryPath + "/filename.plist"
         let fileManager = FileManager.default
         let time = AppDelegate.FoldernameTime()
@@ -44,7 +48,7 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
         }else{
             var nsDictionary: NSDictionary?
             nsDictionary = NSDictionary(contentsOfFile: plistFilePathInDocumentDirectory)
-            
+
             if nsDictionary?.value(forKey: time) == nil{
                 do{
                     let temp = "file://" + plistFilePathInDocumentDirectory
@@ -54,24 +58,69 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
                     plist?.updateValue([0], forKey: time)
                     let plistData = try PropertyListSerialization.data(fromPropertyList: plist!, format: .xml, options: 0)
                     try plistData.write(to: urlofplist!)
-                    
+
                 }catch{
                     print(error.localizedDescription)
                 }
             }
         }
         let dictionaryFromFile: NSMutableDictionary? = NSMutableDictionary(contentsOfFile: plistFilePathInDocumentDirectory)
-        
+
         if let dictionaryFromFileInDocumentDirectory = dictionaryFromFile {
             fileNameDictionary = dictionaryFromFileInDocumentDirectory
         } else {
             let plistFilePathInMainBundle: String? = Bundle.main.path(forResource: "filename", ofType: "plist")
             let dictionaryFromFileInMainBundle: NSMutableDictionary? = NSMutableDictionary(contentsOfFile: plistFilePathInMainBundle!)
             fileNameDictionary = dictionaryFromFileInMainBundle!
-            
+
         }
         NSEvent.addGlobalMonitorForEvents(matching: .scrollWheel, handler: keyDown)
     }
+    
+    //MARK: - START
+    
+    
+    
+//    //MARK: TOGGLE POP OVER
+//    @objc func togglePopover(_ sender: AnyObject?) {
+//        if let button = self.statusBarItem?.button {
+//            if (self.popover.isShown) {
+//                self.popover.performClose(sender)
+//            } else {
+//                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+//            }
+//        }
+//    }
+//
+//
+//    //MARK: INIT STATUS BAR ITEM
+//    private func initStatusBarItem() {
+//        print("INIT STATUS BAR ITEM")
+//        self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
+//        if let button = self.statusBarItem?.button {
+//            button.image = NSImage(named: "ScreenbarIcon")
+//            button.action = #selector(togglePopover(_:))
+//        }
+//    }
+//
+//
+//    //MARK: INIT POP OVER MENU
+//    @available(OSX 10.15, *)
+//    private func initPopoverMenu() {
+//        print("INIT POPOVER MENU")
+//        let popover = NSPopover()
+//
+//        popover.contentSize = NSSize(width: 200, height: 300)
+//        popover.behavior = .transient
+//        popover.contentViewController = storyboard?.instantiateController(identifier: "MenuViewController")
+//        print(popover.contentViewController)
+//
+//        self.popover = popover
+//    }
+//
+//
+//
+//    //MARK: - END
 
     func applicationWillResignActive(_ notification: Notification) {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -98,6 +147,7 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
         let Time = String(year) + "-" + String(month) + "-" + String(day)
         return Time
     }
+
     // set the image or icon on menubar
     func addImage() {
         if let button = statusItem.button {
@@ -107,11 +157,11 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
             button.action = #selector(self.showMainWindow)
         }
     }
-    
+
     func initMainWindowPopover() {
         self.mainWindowPopover.contentViewController = MainWindowViewController(nibName: "MainWindowView", bundle: nil)
     }
-    
+
     func initEventMonitor() {
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
             if self.mainWindowPopover.isShown {
@@ -120,15 +170,15 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
         }
         eventMonitor?.start()
     }
-    
+
     //counter for sessions, initial is 0 as defalut
     func SessionCounter(counter: Int) -> Int{
         let counter = counter + 1
         return counter
     }
-    
+
     //var sub1WindowController: NSWindowController?
-    
+
     @objc func showMainWindow() {
         if let button = statusItem.button {
             // main window opened, so close it
@@ -140,30 +190,30 @@ class AppDelegate: NSViewController, NSApplicationDelegate {
                 print("==nil")
                 MyVariables.sub1WindowController?.showWindow(nil)
             }
-                
+
             // first open main window
             else if (MyVariables.sub1WindowController?.showWindow(nil) == nil && MyVariables.openedBool == false && self.mainWindowPopover.isShown == false){
                 self.mainWindowPopover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
                 eventMonitor?.start()
             }
-                
+
             else if(MyVariables.sub1WindowController?.showWindow(nil) != nil && MyVariables.openedBool == true && self.mainWindowPopover.isShown == false){
                 print(MyVariables.sub1WindowController?.showWindow(nil) ?? "warning")
                 print(self.mainWindowPopover.isShown)
-                
+
                 self.mainWindowPopover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
                 eventMonitor?.start()
                 print("yyy")
-                
+
 
             }
-                
+
             else {
                 MyVariables.sub1WindowController?.showWindow(nil)
             }
         }
     }
-    
+
     func hideMainWindow(_ sender: AnyObject?) {
         self.mainWindowPopover.performClose(sender)
         eventMonitor?.stop()
