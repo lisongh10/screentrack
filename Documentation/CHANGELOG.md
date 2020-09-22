@@ -3,6 +3,11 @@
 **Overview**\
 This document describes the code additions/removals that have been made to the repository
 
+## 9/22/2020
+- "Open Screentrack Button" functionality updated in the new Menu UI
+- Quit is implemented
+- Wireframes 1 and 2 for Main Window and respective documentation added
+
 ## 9/14/2020
 - Updated the Menu user interface in the main menu nib file
 - Started converting functionalities in response to the UI update
