@@ -6,9 +6,10 @@ This document describes the redesigning process of the main user interface or th
 ## Contents
 
 - [Old Design](#old-design)
-- [New Design Guidelines](#new-design-guidelines)
+- [New Design Guidelines](#design-guidelines)
 - [Sketch](#sketch)
-- [Rationale for the Sketch](#rationale-for-the-new-design)
+- [Rationale for the Sketch](#rationales-for-the-sketch)
+- [Feedback](#feedback)
 
 ## Old Design
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/ScreenTrack.png" width="100%" alt="ScreenTrack">
@@ -135,3 +136,11 @@ Combine wireframe 1 and 2 so that users can have both the design of 1 and 2. Wir
 
 **Compromise Disadvantage**\
 This feature will **Definitely** take longer to code. If we not in any rush, I prefer trying this compromise.
+
+## Feedback
+- Allowing users to click the image to open up files/urls may be confusing because only the frontmost application is navigable
+- Consider using a vertical line as an indicator for preview scroller
+- Truncating previews in the scroller should be improved such that users can still use visual cues
+- Consider a global slider implementation in addition to the preview scroller
+- Give the user a sense of time in their work day
+- Move calendar to the top of the side bar
