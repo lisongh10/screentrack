@@ -10,6 +10,7 @@ This document describes the redesigning process of the main user interface or th
 - [Sketch](#sketch)
 - [Rationale for the Sketch](#rationales-for-the-sketch)
 - [Feedback](#feedback)
+- [Wireframe 3](#wireframe-3)
 
 ## Old Design
 <img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/ScreenTrack.png" width="100%" alt="ScreenTrack">
@@ -144,3 +145,14 @@ This feature will **Definitely** take longer to code. If we not in any rush, I p
 - Consider a global slider implementation in addition to the preview scroller
 - Give the user a sense of time in their work day
 - Move calendar to the top of the side bar
+
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Reference.png" width="90%" alt="Reference">
+
+## Wireframe 3
+**Adapted Changes**
+- Calendar moved to the top
+- Mini-bar at the top showing different sessions in one single day
+- Vertical bar as indicator for Preview Scroller
+- Preview Scroller **only shows** images with different metadata
+- The popup bar shows every image inside of a preview
+<img src="https://github.com/lisongh10/screentrack/blob/master/Documentation/Images/Main%20UI%20Images/Main%20Wireframe%203.png" width="90%" alt="Wireframe 3">
